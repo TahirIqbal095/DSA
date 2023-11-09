@@ -1,20 +1,15 @@
 package ProblemsOnArrays.RotateMatrix.bruteForce;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
-        ArrayList<ArrayList<Integer>> arr = new ArrayList<>();
-        arr.add(new ArrayList<>(Arrays.asList(1, 2, 3)));
-        arr.add(new ArrayList<>(Arrays.asList(4, 5, 6)));
-        arr.add(new ArrayList<>(Arrays.asList(7, 8, 9)));
+        int[][] arr = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
 
-        ArrayList<ArrayList<Integer>> ans = rotateMatrix(arr);
+        int n = arr.length;
 
-        for(ArrayList<Integer> ar : ans) {
-            for(Integer el : ar) {
-                System.out.print(el + " ");
+        int[][] ans = rotateMatrix(arr, n);
+
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < n; j++) {
+                System.out.print(ans[i][j] + " ");
             }
             System.out.println();
         }
@@ -23,31 +18,20 @@ public class Main {
     /**
      * Function name: rotateMatrix()
      *
-     * @param arr (ArrayList<ArrayList<Integer>>)
-     * @return (ArrayList<ArrayList<Integer>>)
+     * @param arr (int[][])
+     * @param n (int)
      *
      * Inside function : rotates the matrix 90deg
      */
-    public static ArrayList<ArrayList<Integer>> rotateMatrix(ArrayList<ArrayList<Integer>> arr) {
+    public static int[][] rotateMatrix(int[][] arr, int n) {
 
-        ArrayList<ArrayList<Integer>> rotated = new ArrayList<>(3);
-
-        int n = arr.size();
-        int m = arr.get(0).size();
+        int[][] rotatedMatrix = new int[n][n];
 
         for(int i = 0; i < n; i++) {
-            rotated.add(new ArrayList<>());
-            for(int j = 0; j < m; j++) {
-                rotated.get(i).add(0);
+            for(int j = 0; j < n; j++) {
+                rotatedMatrix[j][n - i - 1] = arr[i][j];
             }
         }
-
-        for(int i = 0; i < n; i++) {
-            for(int j = 0; j < m; j++) {
-                rotated.get(j).set((n - i - 1), arr.get(i).get(j));
-            }
-        }
-
-        return rotated;
+        return rotatedMatrix;
     }
 }
