@@ -1,4 +1,4 @@
-package ProblemsOnArrays.ZeroMatrix.bruteForceApproach;
+package problemsOnArrays.ZeroMatrix.bruteForceApproach;
 
 import java.util.ArrayList;
 import java.util.Arrays;

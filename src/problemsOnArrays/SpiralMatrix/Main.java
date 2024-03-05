@@ -1,4 +1,4 @@
-package ProblemsOnArrays.SpiralMatrix;
+package problemsOnArrays.SpiralMatrix;
 
 import java.util.ArrayList;
 import java.util.Arrays;

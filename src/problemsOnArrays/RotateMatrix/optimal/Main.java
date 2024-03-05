@@ -1,4 +1,4 @@
-package ProblemsOnArrays.RotateMatrix.optimal;
+package problemsOnArrays.RotateMatrix.optimal;
 
 public class Main {
     public static void main(String[] args) {

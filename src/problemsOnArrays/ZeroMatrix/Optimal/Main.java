@@ -1,4 +1,4 @@
-package ProblemsOnArrays.ZeroMatrix.Optimal;
+package problemsOnArrays.ZeroMatrix.Optimal;
 
 import java.util.ArrayList;
 import java.util.Arrays;
