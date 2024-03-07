@@ -6,7 +6,7 @@ public class BubbleSort {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        System.out.print("Enter the number of elements : ");
+        System.out.print("Enter the size of array : ");
         int x = scan.nextInt();
 
         int[] arr = new int[x];
@@ -20,6 +20,8 @@ public class BubbleSort {
         for(int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
+
+        scan.close();
     }
 
     public static void sortArr(int[] arr) {
