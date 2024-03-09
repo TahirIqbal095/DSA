@@ -15,8 +15,8 @@ public class InsertionSort {
         for(int i = 0; i < arr.length; i++) {
             arr[i] = scan.nextInt();
         }
-
-        SortArr(arr);
+        int size = arr.length;
+        sortArr(arr, size);
 
         System.out.print("The sorted array will be : ");
         for(int i = 0; i < arr.length; i++) {
@@ -26,18 +26,18 @@ public class InsertionSort {
         scan.close();
      }
 
-     public static void SortArr(int[] arr) {
+     // insertion sort recursively
+     public static void sortArr(int[] arr, int size) {
+        if(size <= 1) return;
 
-        int j = 0;
-        for(int i = 0; i < arr.length; i++) {
-            j = i;
-
-            while(j > 0 && arr[j - 1] > arr[j]) {
-                int temp = arr[j];
-                arr[j] = arr[j - 1];
-                arr[j - 1] = temp;
-                j--;
-            }
+        sortArr(arr, size - 1);
+        
+        int key = arr[size - 1];
+        int j = size - 2;
+        while(j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j--;
         }
-     }
+        arr[j+1] = key;
+    }
 }
