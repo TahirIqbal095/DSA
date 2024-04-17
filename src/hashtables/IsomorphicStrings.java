@@ -24,6 +24,20 @@ public class IsomorphicStrings {
 
     public static boolean isomophicStrgs(String s, String t) {
 
-        return false;
+        int[] indexS = new int[200];
+        int[] indexT = new int[200];
+
+        if (s.length() != t.length())
+            return false;
+
+        for (int i = 0; i < s.length(); i++) {
+            if (indexS[s.charAt(i)] != indexT[t.charAt(i)]) {
+                return false;
+            }
+
+            indexS[s.charAt(i)] = i + 1;
+            indexT[t.charAt(i)] = i + 1;
+        }
+        return true;
     }
 }
