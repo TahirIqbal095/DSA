@@ -1,4 +1,4 @@
-package problemsOnArrays.SpiralMatrix;
+package arrays.SpiralMatrix;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,7 +12,7 @@ public class Main {
 
         ArrayList<Integer> ans = SpiralMat(arr);
 
-        for(Integer el : ans) {
+        for (Integer el : ans) {
             System.out.print(el + " ");
         }
     }
@@ -26,24 +26,24 @@ public class Main {
         int left = 0, right = m - 1;
         int top = 0, bottom = n - 1;
 
-        while(top <= bottom && left <= right) {
-            for(int i = left; i <= right; i++) {
+        while (top <= bottom && left <= right) {
+            for (int i = left; i <= right; i++) {
                 spiralEl.add(arr.get(top).get(i));
             }
             top++;
 
-            for(int i = top; i <= bottom; i++) {
+            for (int i = top; i <= bottom; i++) {
                 spiralEl.add(arr.get(i).get(right));
             }
             right--;
-            if(top <= bottom) {
-                for(int i = right; i >= left; i--) {
+            if (top <= bottom) {
+                for (int i = right; i >= left; i--) {
                     spiralEl.add(arr.get(bottom).get(i));
                 }
                 bottom--;
             }
-            if(left <= right) {
-                for(int i = bottom; i >= top; i--) {
+            if (left <= right) {
+                for (int i = bottom; i >= top; i--) {
                     spiralEl.add(arr.get(i).get(left));
                 }
                 left++;
