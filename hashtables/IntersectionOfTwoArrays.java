@@ -12,7 +12,7 @@ import java.util.Set;
  * Output: [2]
  */
 
-public class IntersectionOfArrays {
+public class IntersectionOfTwoArrays {
     public static void main(String[] args) {
 
         int[] arr1 = { 1, 3, 4 };
