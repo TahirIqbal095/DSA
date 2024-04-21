@@ -2,7 +2,6 @@ package hashtables;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 public class MinimumIndexSum {
     public static void main(String[] args) {
