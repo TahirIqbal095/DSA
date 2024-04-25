@@ -42,7 +42,6 @@ public class IntersectionOfTwoArrays {
                 }
             }
         }
-
         return list;
     }
 }
